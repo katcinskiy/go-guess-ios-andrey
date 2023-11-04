@@ -14,6 +14,12 @@
 		5504BCE22AD207EF00CC2AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5504BCE12AD207EF00CC2AC8 /* Assets.xcassets */; };
 		5504BCE52AD207EF00CC2AC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5504BCE32AD207EF00CC2AC8 /* LaunchScreen.storyboard */; };
 		55242B902AD4990000EC8DCD /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55242B8F2AD4990000EC8DCD /* OnboardingData.swift */; };
+		553FE2A22AF209E3009F0AF4 /* GGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FE2A12AF209E3009F0AF4 /* GGViewController.swift */; };
+		553FE2A42AF20C74009F0AF4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FE2A32AF20C74009F0AF4 /* SettingsViewController.swift */; };
+		553FE2A62AF20D1F009F0AF4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FE2A52AF20D1F009F0AF4 /* MainTabBarController.swift */; };
+		553FE2A82AF3683D009F0AF4 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FE2A72AF3683D009F0AF4 /* LeaderboardViewController.swift */; };
+		553FE2AB2AF36AF7009F0AF4 /* ConstrainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FE2AA2AF36AF7009F0AF4 /* ConstrainedButton.swift */; };
+		553FE2AD2AF3EAB2009F0AF4 /* FigmaMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FE2AC2AF3EAB2009F0AF4 /* FigmaMeta.swift */; };
 		55FA98492AD220890062566C /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA98482AD220890062566C /* CustomPageViewController.swift */; };
 		55FA984F2AD410A50062566C /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA984E2AD410A50062566C /* DataViewController.swift */; };
 		55FFE8752ADC687B00078114 /* CircleProgressVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FFE8742ADC687B00078114 /* CircleProgressVIew.swift */; };
@@ -29,6 +35,12 @@
 		5504BCE42AD207EF00CC2AC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5504BCE62AD207EF00CC2AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55242B8F2AD4990000EC8DCD /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
+		553FE2A12AF209E3009F0AF4 /* GGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGViewController.swift; sourceTree = "<group>"; };
+		553FE2A32AF20C74009F0AF4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		553FE2A52AF20D1F009F0AF4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		553FE2A72AF3683D009F0AF4 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		553FE2AA2AF36AF7009F0AF4 /* ConstrainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstrainedButton.swift; sourceTree = "<group>"; };
+		553FE2AC2AF3EAB2009F0AF4 /* FigmaMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaMeta.swift; sourceTree = "<group>"; };
 		55FA98482AD220890062566C /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		55FA984E2AD410A50062566C /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		55FFE8742ADC687B00078114 /* CircleProgressVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressVIew.swift; sourceTree = "<group>"; };
@@ -64,19 +76,49 @@
 		5504BCD72AD207EE00CC2AC8 /* Igrulya */ = {
 			isa = PBXGroup;
 			children = (
-				55242B8F2AD4990000EC8DCD /* OnboardingData.swift */,
+				553FE2A92AF36AD8009F0AF4 /* Misc */,
+				553FE29C2AF03F59009F0AF4 /* Main */,
+				553FE29B2AF038E4009F0AF4 /* Onboarding */,
 				5504BCD82AD207EE00CC2AC8 /* AppDelegate.swift */,
 				5504BCDA2AD207EE00CC2AC8 /* SceneDelegate.swift */,
-				5504BCDC2AD207EE00CC2AC8 /* OnboardingViewController.swift */,
 				5504BCDE2AD207EE00CC2AC8 /* Main.storyboard */,
 				5504BCE12AD207EF00CC2AC8 /* Assets.xcassets */,
 				5504BCE32AD207EF00CC2AC8 /* LaunchScreen.storyboard */,
 				5504BCE62AD207EF00CC2AC8 /* Info.plist */,
-				55FA98482AD220890062566C /* CustomPageViewController.swift */,
-				55FA984E2AD410A50062566C /* DataViewController.swift */,
-				55FFE8742ADC687B00078114 /* CircleProgressVIew.swift */,
 			);
 			path = Igrulya;
+			sourceTree = "<group>";
+		};
+		553FE29B2AF038E4009F0AF4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				55FA98482AD220890062566C /* CustomPageViewController.swift */,
+				55FA984E2AD410A50062566C /* DataViewController.swift */,
+				5504BCDC2AD207EE00CC2AC8 /* OnboardingViewController.swift */,
+				55242B8F2AD4990000EC8DCD /* OnboardingData.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		553FE29C2AF03F59009F0AF4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				553FE2A12AF209E3009F0AF4 /* GGViewController.swift */,
+				553FE2A32AF20C74009F0AF4 /* SettingsViewController.swift */,
+				553FE2A52AF20D1F009F0AF4 /* MainTabBarController.swift */,
+				553FE2A72AF3683D009F0AF4 /* LeaderboardViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		553FE2A92AF36AD8009F0AF4 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				553FE2AA2AF36AF7009F0AF4 /* ConstrainedButton.swift */,
+				553FE2AC2AF3EAB2009F0AF4 /* FigmaMeta.swift */,
+				55FFE8742ADC687B00078114 /* CircleProgressVIew.swift */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +154,7 @@
 				TargetAttributes = {
 					5504BCD42AD207EE00CC2AC8 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -174,11 +217,17 @@
 			files = (
 				55242B902AD4990000EC8DCD /* OnboardingData.swift in Sources */,
 				5504BCDD2AD207EE00CC2AC8 /* OnboardingViewController.swift in Sources */,
+				553FE2A62AF20D1F009F0AF4 /* MainTabBarController.swift in Sources */,
 				5504BCD92AD207EE00CC2AC8 /* AppDelegate.swift in Sources */,
 				55FFE8752ADC687B00078114 /* CircleProgressVIew.swift in Sources */,
 				55FA984F2AD410A50062566C /* DataViewController.swift in Sources */,
 				5504BCDB2AD207EE00CC2AC8 /* SceneDelegate.swift in Sources */,
+				553FE2A22AF209E3009F0AF4 /* GGViewController.swift in Sources */,
+				553FE2AB2AF36AF7009F0AF4 /* ConstrainedButton.swift in Sources */,
+				553FE2A82AF3683D009F0AF4 /* LeaderboardViewController.swift in Sources */,
+				553FE2AD2AF3EAB2009F0AF4 /* FigmaMeta.swift in Sources */,
 				55FA98492AD220890062566C /* CustomPageViewController.swift in Sources */,
+				553FE2A42AF20C74009F0AF4 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -343,6 +393,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -353,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
