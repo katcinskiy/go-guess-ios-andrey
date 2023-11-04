@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGM-ky-YYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-938" y="-89"/>
+            <point key="canvasLocation" x="-931" y="85"/>
         </scene>
         <!--Custom Page View Controller-->
         <scene sceneID="I6h-OW-qPS">
@@ -34,7 +34,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCr-o5-v2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="-89"/>
+            <point key="canvasLocation" x="-106" y="-611"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="Cj5-8I-SD4">
@@ -53,10 +53,9 @@
                                 <rect key="frame" x="76" y="690" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sly-Pg-t0Q">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sly-Pg-t0Q" customClass="ConstrainedButton" customModule="Igrulya" customModuleProvider="target">
                                         <rect key="frame" x="78" y="22" width="84" height="84"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
@@ -79,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lF-NC-0eR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-95.419847328244273" y="-89.436619718309871"/>
+            <point key="canvasLocation" x="-106" y="85"/>
         </scene>
         <!--Data View Controller-->
         <scene sceneID="9oY-tr-dsu">
@@ -114,18 +113,134 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Lo-MX-i5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-95.419847328244273" y="550"/>
+            <point key="canvasLocation" x="-106" y="724"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="v0T-uG-QAC">
+            <objects>
+                <viewController title="Settings" id="nLB-UG-r0i" customClass="SettingsViewController" customModule="Igrulya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lRa-Ky-MEs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iRK-gX-PPX"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="Settings" id="mDh-ED-z2R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ZM-vb-S2a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2105" y="724"/>
+        </scene>
+        <!--G&G-->
+        <scene sceneID="pmc-aY-p4N">
+            <objects>
+                <viewController storyboardIdentifier="ggViewController" title="G&amp;G" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LDH-tA-1xm" customClass="GGViewController" customModule="Igrulya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MKf-la-a2i">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5U5-Rs-Iec" customClass="ConstrainedButton" customModule="Igrulya" customModuleProvider="target">
+                                <rect key="frame" x="148" y="666" width="97" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="EXPLORE"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXN-Yz-xkG" customClass="ConstrainedButton" customModule="Igrulya" customModuleProvider="target">
+                                <rect key="frame" x="155" y="623" width="84" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="RATING"/>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ONh-mX-vcP">
+                                <rect key="frame" x="76" y="439" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Countries you are visited" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jL-d4-xnB">
+                                <rect key="frame" x="103" y="291" width="188" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VCn-qs-1kU">
+                                <rect key="frame" x="227" y="108" width="124" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="games and time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5z-06-1zA">
+                                <rect key="frame" x="29" y="131" width="122" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IRb-mG-aHW"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="G&amp;G" id="yX6-Sd-4OY"/>
+                    <connections>
+                        <outlet property="countriesLabel" destination="1jL-d4-xnB" id="OZm-yo-hLw"/>
+                        <outlet property="exploreButton" destination="5U5-Rs-Iec" id="udS-kr-hL0"/>
+                        <outlet property="gamesAndTimeLabel" destination="G5z-06-1zA" id="JTe-ss-xbp"/>
+                        <outlet property="ratingButton" destination="PXN-Yz-xkG" id="CRE-62-wpL"/>
+                        <outlet property="scoreView" destination="VCn-qs-1kU" id="Huw-Vr-GHn"/>
+                        <outlet property="visitedCountriesView" destination="ONh-mX-vcP" id="9xw-7F-R00"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jnu-4k-hNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1382.4427480916031" y="723.94366197183103"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="QWF-oW-c0N">
+            <objects>
+                <tabBarController storyboardIdentifier="mainTabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XLO-d1-S9B" customClass="MainTabBarController" customModule="Igrulya" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0oj-KH-FtU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.98039215686274506" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="LDH-tA-1xm" kind="relationship" relationship="viewControllers" id="fBI-Fh-Cn1"/>
+                        <segue destination="nLB-UG-r0i" kind="relationship" relationship="viewControllers" id="nFZ-CY-9te"/>
+                        <segue destination="MN0-FK-2fx" kind="relationship" relationship="viewControllers" id="Kt6-z0-iYU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSL-Ng-EMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2105" y="-10"/>
+        </scene>
+        <!--Leaderboard-->
+        <scene sceneID="N7M-UX-dsc">
+            <objects>
+                <viewController title="Leaderboard" id="MN0-FK-2fx" customClass="LeaderboardViewController" customModule="Igrulya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4R5-BU-6xm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ET0-nE-6PO"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="Leaderboard" id="YvD-aW-DkF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LR4-4d-Y9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2837" y="724"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
