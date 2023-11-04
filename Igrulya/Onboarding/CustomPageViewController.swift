@@ -37,7 +37,7 @@ class CustomPageViewController: UIPageViewController, UIScrollViewDelegate {
                 setViewControllers([nextPage], direction: .forward, animated: animated, completion: completion)
             }
         }
-        print("goToNextPage")
+//        print("goToNextPage")
     }
 
     func goToPreviousPage(animated _: Bool = true, completion: ((Bool) -> Void)? = nil) {
@@ -47,7 +47,7 @@ class CustomPageViewController: UIPageViewController, UIScrollViewDelegate {
             }
         }
 
-        print("goToPreviousPage")
+//        print("goToPreviousPage")
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

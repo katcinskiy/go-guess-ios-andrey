@@ -1,17 +1,9 @@
 import UIKit
 
 class OnboardingViewController: UIViewController, UIScrollViewDelegate {
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let point = scrollView.contentOffset
-//        let offsetX = point.x
-//        var percentComplete: CGFloat
-//        percentComplete = (point.x - customPageViewController.view.frame.size.width) / customPageViewController.view.frame.size.width
-//        print("--- \(offsetX) percentComplete: ", percentComplete)
-//    }
-
     @IBOutlet var contentView: UIView!
     @IBOutlet var buttonView: UIView!
-    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var nextButton: ConstrainedButton!
     var progressView: CircularProgressView!
     var dvcList: [DataViewController] = []
 
@@ -25,30 +17,33 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
         }
 
         if let currentIndex = dvcList.firstIndex(of: dvc) {
-            print("Button swipe from page \(currentIndex)")
+//            print("Button swipe from page \(currentIndex)")
             customPageViewController.swipingFromPage = currentIndex
+
+            if currentIndex == dvcList.count - 1 {
+                // Assuming you have a storyboard named "Main" and a view controller with the identifier "NewViewController"
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "mainTabBarController") as! MainTabBarController
+
+                navigationController?.setViewControllers([mainTabBarController], animated: true)
+                navigationController?.tabBarItem.badgeColor = UIColor.red
+            }
         }
 
         customPageViewController.goToNextPage(animated: true, completion: animationFinish)
     }
 
     func setNextButtonAttribures(state: Int) {
-        print("setNextButtonAttribures --> \(state)")
-        // 390:844 screen
-        //  74: 74 button with download
-        //  46: 46 button
-        // 223: 58 buttonStartGame
-
         nextButtonHeightConstraint?.isActive = false
         nextButtonWidthConstraint?.isActive = false
 
         if state == dvcList.count - 1 {
-            nextButtonWidthConstraint = nextButton.widthAnchor.constraint(equalTo: nextButton.heightAnchor, multiplier: CGFloat(223) / 58)
+            let buttonSize = FigmaMeta.Onboarding.startButton
+            nextButtonHeightConstraint = nextButton.heightAnchor.constraint(equalToConstant: buttonSize.height)
+            nextButtonWidthConstraint = nextButton.widthAnchor.constraint(equalToConstant: buttonSize.width)
         } else {
-            let buttonHeightRatio = CGFloat(844) / CGFloat(46)
-            let buttonHeight = view.frame.size.height / buttonHeightRatio
-            nextButton.layer.cornerRadius = buttonHeight / 2
-            nextButtonHeightConstraint = nextButton.heightAnchor.constraint(equalToConstant: buttonHeight)
+            let buttonSize = FigmaMeta.Onboarding.nextButton
+            nextButtonHeightConstraint = nextButton.heightAnchor.constraint(equalToConstant: buttonSize.width)
             nextButtonWidthConstraint = nextButton.widthAnchor.constraint(equalTo: nextButton.heightAnchor)
         }
 
@@ -56,22 +51,20 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
         nextButtonHeightConstraint?.isActive = true
 
         let title = dvcList[state].buttonText ?? ">"
-        nextButton.setTitle(title, for: .normal)
+        nextButton.setTitle(title, for: UIControl.State.normal)
         animateButton()
     }
 
     fileprivate func configureProgressView() {
-        // TODO: get ratio
-        let progressHeightRatio = CGFloat(844) / CGFloat(76)
-        let progressHeight = view.frame.size.height / progressHeightRatio
-        progressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: progressHeight, height: progressHeight), lineWidth: 3, rounded: true)
+        let progressSize = FigmaMeta.Onboarding.progressBar
+        progressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: progressSize.width, height: progressSize.width), lineWidth: 3, rounded: true)
         progressView.progressColor = UIColor.white
         progressView.trackColor = UIColor.lightGray
         progressView.center = buttonView.center
         progressView.progress = 0
         progressView.translatesAutoresizingMaskIntoConstraints = false
-        progressView.heightAnchor.constraint(equalToConstant: progressHeight).isActive = true
-        progressView.widthAnchor.constraint(equalToConstant: progressHeight).isActive = true
+        progressView.heightAnchor.constraint(equalToConstant: progressSize.width).isActive = true
+        progressView.widthAnchor.constraint(equalToConstant: progressSize.width).isActive = true
 
         buttonView.addSubview(progressView)
         buttonView.sendSubviewToBack(progressView)
@@ -79,7 +72,6 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
 
     fileprivate func setConstraints() {
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
         buttonView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
@@ -106,9 +98,10 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     fileprivate func setColors() {
         buttonView.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         // TODO: get color
-        view.backgroundColor = UIColor(red: 156 / 255, green: 200 / 255, blue: 101 / 255, alpha: 1.0)
+        view.backgroundColor = .lightGreen
         nextButton.backgroundColor = UIColor.white
-        nextButton.tintColor = UIColor(red: 156 / 255, green: 200 / 255, blue: 101 / 255, alpha: 1.0)
+        nextButton.tintColor = .lightGreen
+        nextButton.setTitleColor(.lightGreen, for: .normal)
         contentView.backgroundColor = UIColor(white: 0, alpha: 0)
     }
 
@@ -254,7 +247,7 @@ extension OnboardingViewController: UIPageViewControllerDelegate, UIPageViewCont
     // TODO: change to runtime
     // currently used for change button layout
     fileprivate func animationFinish(_ completed: Bool) {
-        print("completed \(completed)")
+//        print("completed \(completed)")
         if completed {
             guard let dvc = customPageViewController.viewControllers?.first as? DataViewController else {
                 return
