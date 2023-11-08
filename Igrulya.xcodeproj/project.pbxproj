@@ -20,6 +20,7 @@
 		553FE2A82AF3683D009F0AF4 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FE2A72AF3683D009F0AF4 /* LeaderboardViewController.swift */; };
 		553FE2AB2AF36AF7009F0AF4 /* ConstrainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FE2AA2AF36AF7009F0AF4 /* ConstrainedButton.swift */; };
 		553FE2AD2AF3EAB2009F0AF4 /* FigmaMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FE2AC2AF3EAB2009F0AF4 /* FigmaMeta.swift */; };
+		55B312022AFABCC70045798E /* ConstrainedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B312012AFABCC70045798E /* ConstrainedTextField.swift */; };
 		55FA98492AD220890062566C /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA98482AD220890062566C /* CustomPageViewController.swift */; };
 		55FA984F2AD410A50062566C /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA984E2AD410A50062566C /* DataViewController.swift */; };
 		55FFE8752ADC687B00078114 /* CircleProgressVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FFE8742ADC687B00078114 /* CircleProgressVIew.swift */; };
@@ -41,6 +42,7 @@
 		553FE2A72AF3683D009F0AF4 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		553FE2AA2AF36AF7009F0AF4 /* ConstrainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstrainedButton.swift; sourceTree = "<group>"; };
 		553FE2AC2AF3EAB2009F0AF4 /* FigmaMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaMeta.swift; sourceTree = "<group>"; };
+		55B312012AFABCC70045798E /* ConstrainedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstrainedTextField.swift; sourceTree = "<group>"; };
 		55FA98482AD220890062566C /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		55FA984E2AD410A50062566C /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		55FFE8742ADC687B00078114 /* CircleProgressVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressVIew.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				553FE2AA2AF36AF7009F0AF4 /* ConstrainedButton.swift */,
+				55B312012AFABCC70045798E /* ConstrainedTextField.swift */,
 				553FE2AC2AF3EAB2009F0AF4 /* FigmaMeta.swift */,
 				55FFE8742ADC687B00078114 /* CircleProgressVIew.swift */,
 			);
@@ -227,6 +230,7 @@
 				553FE2A82AF3683D009F0AF4 /* LeaderboardViewController.swift in Sources */,
 				553FE2AD2AF3EAB2009F0AF4 /* FigmaMeta.swift in Sources */,
 				55FA98492AD220890062566C /* CustomPageViewController.swift in Sources */,
+				55B312022AFABCC70045798E /* ConstrainedTextField.swift in Sources */,
 				553FE2A42AF20C74009F0AF4 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
