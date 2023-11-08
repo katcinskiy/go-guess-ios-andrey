@@ -18,14 +18,14 @@ class GGViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.lightGreen
+        view.backgroundColor = .white
 
         let scoreViewSize = FigmaMeta.Main.GG.scoreView
         let visitedCountriesViewSize = FigmaMeta.Main.GG.visitedCountriesView
         let ratingButtonSize = FigmaMeta.Main.GG.ratingButton
         let exploreButtonSize = FigmaMeta.Main.GG.exploreButton
 
-        gamesAndTimeLabel.textColor = .white
+        gamesAndTimeLabel.textColor = .black
         gamesAndTimeLabel.numberOfLines = 2
         gamesAndTimeLabel.textAlignment = .left
         gamesAndTimeLabel.text = """
@@ -38,7 +38,7 @@ class GGViewController: UIViewController {
         scoreView.widthAnchor.constraint(equalToConstant: scoreViewSize.width).isActive = true
         scoreView.translatesAutoresizingMaskIntoConstraints = false
 
-        countriesLabel.textColor = .white
+        countriesLabel.textColor = .black
         countriesLabel.font = UIFont.boldSystemFont(ofSize: countriesLabel.font.pointSize)
         countriesLabel.translatesAutoresizingMaskIntoConstraints = false
 
@@ -48,14 +48,15 @@ class GGViewController: UIViewController {
 
         ratingButton.heightAnchor.constraint(equalToConstant: ratingButtonSize.height).isActive = true
         ratingButton.widthAnchor.constraint(equalToConstant: ratingButtonSize.width).isActive = true
-        ratingButton.backgroundColor = UIColor.lightGreen
-        ratingButton.layer.borderColor = UIColor.white.cgColor
+        ratingButton.backgroundColor = UIColor.white
+        ratingButton.tintColor = .black
+        ratingButton.layer.borderColor = UIColor.black.cgColor
         ratingButton.layer.borderWidth = 1
 
         exploreButton.heightAnchor.constraint(equalToConstant: exploreButtonSize.height).isActive = true
         exploreButton.widthAnchor.constraint(equalToConstant: exploreButtonSize.width).isActive = true
-        exploreButton.backgroundColor = .white
-        exploreButton.tintColor = .lightGreen
+        exploreButton.backgroundColor = .lightGreen
+        exploreButton.tintColor = .white
 
         var diff: Double = 0
 
@@ -97,7 +98,6 @@ class GGViewController: UIViewController {
             exploreButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -exploreTopAnchorConstant),
             exploreButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
-        ratingButton.contentHorizontalAlignment = .left
 
 //        print("view.safeAreaLayoutGuide.layoutFrame --> \(view.safeAreaLayoutGuide.layoutFrame)")
 //        print("view.frame --> \(view.frame)")
