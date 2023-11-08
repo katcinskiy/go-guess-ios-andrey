@@ -83,22 +83,37 @@ enum FigmaMeta {
 
         enum Settings {
             static var profileView: DeviceInfo {
-                let figmaInfo = FigmaInfo(width: 0, height: 0, top: 0, left: 0)
+                let figmaInfo = FigmaInfo(width: 160, height: 160, top: 116.86, left: 115)
                 return convertRatio(from: figmaInfo)
             }
 
-            static var ratingButton: DeviceInfo {
-                let figmaInfo = FigmaInfo(width: 0, height: 0, top: 0, left: 0)
+            static var userNameLabel: DeviceInfo {
+                let figmaInfo = FigmaInfo(width: 0, height: 0, top: 306.86, left: 0)
                 return convertRatio(from: figmaInfo)
             }
 
-            static var visitedCountriesView: DeviceInfo {
-                let figmaInfo = FigmaInfo(width: 0, height: 0, top: 0, left: 0)
+            static var levelBarView: DeviceInfo {
+                let figmaInfo = FigmaInfo(width: 262, height: 43.25, top: 339.86, left: 64)
                 return convertRatio(from: figmaInfo)
             }
 
-            static var scoreView: DeviceInfo {
-                let figmaInfo = FigmaInfo(width: 0, height: 0, top: 0, left: 0)
+            static var nextLevelView: DeviceInfo {
+                let figmaInfo = FigmaInfo(width: 34, height: 34, top: 349.11, left: 292)
+                return convertRatio(from: figmaInfo)
+            }
+
+            static var levelBar: DeviceInfo {
+                let figmaInfo = FigmaInfo(width: 234, height: 10, top: 366.11 - 5, left: 64)
+                return convertRatio(from: figmaInfo)
+            }
+
+            static var userNameInput: DeviceInfo {
+                let figmaInfo = FigmaInfo(width: 342, height: 75, top: 423.11, left: 24)
+                return convertRatio(from: figmaInfo)
+            }
+
+            static var updateButton: DeviceInfo {
+                let figmaInfo = FigmaInfo(width: 147, height: 58, top: 659, left: 121.5)
                 return convertRatio(from: figmaInfo)
             }
         }
