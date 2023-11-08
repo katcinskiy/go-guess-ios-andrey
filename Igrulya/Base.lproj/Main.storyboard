@@ -122,14 +122,73 @@
                     <view key="view" contentMode="scaleToFill" id="lRa-Ky-MEs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1J-Ip-hnl" customClass="ConstrainedButton" customModule="Igrulya" customModuleProvider="target">
+                                <rect key="frame" x="153" y="656" width="88" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UPDATE"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YAf-FL-n0j" customClass="ConstrainedTextField" customModule="Igrulya" customModuleProvider="target">
+                                <rect key="frame" x="153" y="447" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lcC-pV-CYD">
+                                <rect key="frame" x="81" y="290" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hSj-oX-wBh">
+                                        <rect key="frame" x="45" y="62" width="150" height="4"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lvl 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsX-ZS-K9V">
+                                        <rect key="frame" x="8" y="0.0" width="42" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUY-xb-So1">
+                                        <rect key="frame" x="196" y="48" width="36" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUk-Ux-Eoq">
+                                <rect key="frame" x="175" y="219" width="36" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M75-Rr-2qd">
+                                <rect key="frame" x="139" y="111" width="124" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iRK-gX-PPX"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Settings" id="mDh-ED-z2R"/>
+                    <connections>
+                        <outlet property="levelBar" destination="hSj-oX-wBh" id="XYo-Oz-qlA"/>
+                        <outlet property="levelBarView" destination="lcC-pV-CYD" id="mXt-VC-1ER"/>
+                        <outlet property="levelLabel" destination="gsX-ZS-K9V" id="7kZ-aY-CnZ"/>
+                        <outlet property="nextLevelView" destination="aUY-xb-So1" id="qxa-xd-qCU"/>
+                        <outlet property="profileView" destination="M75-Rr-2qd" id="osS-hc-fcg"/>
+                        <outlet property="updateButton" destination="L1J-Ip-hnl" id="8PN-2r-qRl"/>
+                        <outlet property="userNameLabel" destination="QUk-Ux-Eoq" id="oK3-2W-uj6"/>
+                        <outlet property="userNameTextField" destination="YAf-FL-n0j" id="2eA-v9-eRh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZM-vb-S2a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2105" y="724"/>
+            <point key="canvasLocation" x="2883" y="724"/>
         </scene>
         <!--G&G-->
         <scene sceneID="pmc-aY-p4N">
@@ -191,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jnu-4k-hNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1382.4427480916031" y="723.94366197183103"/>
+            <point key="canvasLocation" x="2105" y="724"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="QWF-oW-c0N">
@@ -203,9 +262,9 @@
                         <color key="backgroundColor" red="0.96078431372549022" green="0.98039215686274506" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="LDH-tA-1xm" kind="relationship" relationship="viewControllers" id="fBI-Fh-Cn1"/>
-                        <segue destination="nLB-UG-r0i" kind="relationship" relationship="viewControllers" id="nFZ-CY-9te"/>
                         <segue destination="MN0-FK-2fx" kind="relationship" relationship="viewControllers" id="Kt6-z0-iYU"/>
+                        <segue destination="LDH-tA-1xm" kind="relationship" relationship="viewControllers" id="qfF-Gw-Hyr"/>
+                        <segue destination="nLB-UG-r0i" kind="relationship" relationship="viewControllers" id="0hL-Vd-bte"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSL-Ng-EMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -226,7 +285,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LR4-4d-Y9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2837" y="724"/>
+            <point key="canvasLocation" x="1349" y="724"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="RQJ-x9-ViI">
+            <objects>
+                <viewController title="Settings" id="hzF-hZ-OoW" customClass="SettingsViewController" customModule="Igrulya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mbL-bf-hQo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vd3-hV-wei">
+                                <rect key="frame" x="135" y="190" width="124" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYF-Vb-aHH" customClass="ConstrainedButton" customModule="Igrulya" customModuleProvider="target">
+                                <rect key="frame" x="153" y="656" width="88" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UPDATE"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wp8-oN-7wy">
+                                <rect key="frame" x="153" y="447" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vd6-FP-Zmh">
+                                <rect key="frame" x="122" y="387" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ebn-sR-X0n"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="Settings" id="gi4-1I-pXR"/>
+                    <connections>
+                        <outlet property="levelBar" destination="vd6-FP-Zmh" id="4Mh-Wd-e4E"/>
+                        <outlet property="profileView" destination="mbL-bf-hQo" id="pFa-6V-XKP"/>
+                        <outlet property="updateButton" destination="XYF-Vb-aHH" id="4Ld-qn-x58"/>
+                        <outlet property="userNameTextField" destination="wp8-oN-7wy" id="8Vj-oM-1cu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oh2-Uf-Pxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="1428"/>
         </scene>
     </scenes>
     <resources>
@@ -235,6 +339,9 @@
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
